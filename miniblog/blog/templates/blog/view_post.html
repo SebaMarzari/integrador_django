@@ -1,0 +1,14 @@
+<h2>{{ post.title }}</h2>
+<p>{{ post.content }}</p>
+<p>Fecha de creación: {{ post.created_date }}</p>
+<p>Autor: {{ post.autor }}</p>
+
+<h3>Comentarios:</h3>
+{% for comment in comments %}
+  <p>{{ comment.text }}</p>
+  <p>Fecha de creación: {{ comment.created_date }}</p>
+  <p>Autor: {{ comment.autor }}</p>
+  <hr>
+{% empty %}
+  <p>No hay comentarios.</p>
+{% endfor %}

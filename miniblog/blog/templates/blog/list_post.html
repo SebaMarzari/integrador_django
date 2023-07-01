@@ -1,0 +1,9 @@
+{% for post in posts %}
+  <h2>{{ post.titulo }}</h2>
+  <p>{{ post.contenido }}</p>
+  <p>Fecha de creación: {{ post.fecha_creacion }}</p>
+  <p>Autor: {{ post.autor }}</p>
+  <hr>
+{% empty %}
+  <p>No hay posts.</p>
+{% endfor %}
